@@ -48,13 +48,16 @@ Sequencing instructions make decisions and change the control flow of the progra
 | if branch on not equal, jump to branch at ```Label```...   |  ```bne $s1,$s2,Label``` | ```if ($s1 != $s2) { Label(); }``` |
 | jump to ```Label```   |  ```j Label``` | ```Label();``` |
 
-##### Higher Level Language Example
+##### Higher Level Language Example (Java)
 
 ```cpp
-if (i == j)
+// i, j, and k, are all ints
+
+if (i == j) {
   h = i + j;
-else
+} else {
   h = i - j;
+}
 ```
 
 ##### MIPS Assembly Language Example
@@ -80,4 +83,20 @@ Remember, assembly language itself is still an abstraction away from the languag
   <img width="100%" src="https://github.com/gurkamalpsc/mips-instruction-set-architecture/blob/master/img/machineCode.jpg">
 </p>
 
+##### Higher Level Language Example (JavaScript)
 
+```js
+const reg9 = reg11 - 3;
+```
+
+##### MIPS Assembly Language Instruction
+
+```asm
+addi        $9, $11, -3
+```
+
+##### Machine Code Instruction
+
+```binary
+00100001011010011111111111111101
+```
