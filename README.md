@@ -124,22 +124,4 @@ add        R8, R17, R18   # register numbers
 ### One Annoying Problem
 MIPS provides 32 bits per instruction, and this works great when ```rs``` and ```rt``` refer to data by CPU register number. However, machines also need to be able to handle immediately passed values in addition to variables. To solve this problem, MIPS actually has 3 instruction formats:
 
-
-
-| Format | 6 bits | 5 bits | 5 bits | 5 bits | 5 bits | 6 bits | Use |
-| :----- | :------| :------| :------| :------| :------|--------|-----|
-| R | ```opcode``` | ```rs``` | ```rt``` | ```rd``` | ```shamt``` | ```funct``` | Arithmetic, Logic |
-I<td colspan=1>```opcode```<td colspan=1>```rs```<td colspan=1>```rt```<td colspan=3>address/immediate (16 bits)<td colspan=1>Load/Store, Branch, Immediate
-  ||
-
-
-
-
-
-
-
-
-
-### R Instruction
-### I Instruction
-### J Instruction
+<table><tr><th rowspan="2">Format</th><th colspan="6">Instruction Fields</th><th rowspan="2">Uses</th></tr><tr><td>6 bits</td><td>5 bits</td><td>5 bits</td><td>5 bits</td><td>5 bits</td><td>6 bits</td></tr><tr><td>R Instruction</td><td>op</td><td>rs</td><td>rt</td><td>rd</td><td>shamt</td><td>funct</td><td>Arithmetic, Logic</td></tr><tr><td>I Instruction</td><td>op</td><td>rs</td><td>rt</td><td colspan="3">address/immediate (16 bits)</td><td>Load/Store, Branch, Immediates</td></tr><tr><td>J Instruction</td><td>op</td><td colspan="5">target address (26 bits)</td><td>Jump</td></tr></table>
