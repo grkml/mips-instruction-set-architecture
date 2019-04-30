@@ -1,7 +1,8 @@
 # MIPS Instruction Set Architecture Overview
 ISA (Instruction Set Architecture) refers to the layers between the software and the hardware in a computer. It is a concept that is usually visualized between a high level language and the physical hardware. It typically consists of an assembly language with human readable instructions that compiles to binary machine code with CPU readable instructions.
-
-  <img width="60%" src="https://github.com/gurkamalpsc/mips-instruction-set-architecture/blob/master/img/structure.gif">
+<p align="center">
+  <img width="45%" src="https://github.com/gurkamalpsc/mips-instruction-set-architecture/blob/master/img/structure.gif">
+</p>
 
 
      
