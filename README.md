@@ -101,7 +101,7 @@ add        R8, R17, R18   # register numbers
 000000 10001 10010 01000 00000 100000
 ```
 
-### Fields of the Machine Code Instruction
+### Fields of the 32 bit Machine Code Instruction
 
 | ```opcode``` | ```rs``` | ```rt``` | ```rd``` | ```shamt``` | ```funct``` | 
 | :------------- | :-------------| :-----| :---| :---| :--|
