@@ -16,8 +16,8 @@ destination  =  source1   operation   source2
 ### Data Operation
 Data operation instructions are what we think of when we write programming statements. They can be mathematical operaitons such addition and subtraction or logical operations such as < > == !=. Here are a few examples:
 
-| Operation     | MIPS Instruction           | Higher Order Language Equivalent  |
-| ------------- |-------------| -----|
+| Operation     | MIPS Instruction      | Higher Order Language Equivalent  |
+| :------------- | :-------------| :-----|
 | addition      | ```add $s1,$s2,$s3``` | ```$s1 = $s2 + $s3``` |
 | subtraction   |  ```sub $s1,$s2,$s3``` | ```$s1 = $s2 – $s3``` |
 | immediate addition   |  ```addi $s1,$s2,75``` | ```$s1 = $s2 + 75``` |
@@ -29,8 +29,18 @@ Data operation instructions are what we think of when we write programming state
 Of course the CPU's register memory system is small (with only 32 registers). So, data needs to be constantly stored to and loaded from RAM. Data transfer instructions occur in the background in between data operation instructions. Here are a few examples:
 
 | Operation     | MIPS Instruction           | Higher Order Language Equivalent  |
-| ------------- |-------------| -----|
+| :------------- | :-------------| :-----|
 | load word      | ```lw $s1,20($s2)``` | ```$s1 = Memory[$s2 + 20]``` |
 | store word   |  ```sw $s1,20($s2)``` | ```Memory[$s2 + 20] = $s1``` |
 
 ### Sequencing
+Sequencing instructures make decisions and change the control flow of the program. They control the flow by telling the execution sequence to jump to some ```Label```, a portion of the MIPS Assembly Language marked with that ```Label```
+
+| Operation     | MIPS Instruction      | Higher Order Language Equivalent  |
+| :------------- | :-------------| :-----|
+| if branch on equal, jump to branch at ```Label```...      | ```beq $s1,$s2,Label``` | ```if ($s1 == $s2) { Label(); }``` |
+| if branch on not equal, jump to branch at ```Label```...   |  ```bne $s1,$s2,Label``` | ```if ($s1 != $s2) { Label(); }``` |
+| immediate addition   |  ```addi $s1,$s2,75``` | ```$s1 = $s2 + 75``` |
+| and |  ```and $s1,$s2,$s3``` | ```$s1 = $s2 & $s3``` |
+| or |    ```or $s1,$s2,$s3``` | ```$s1 = $s2 \| $s3``` |
+| nor |     ```nor $s1,$s2,$s3``` | ```$s1 = ~ ($s2 \| $s3)``` |
