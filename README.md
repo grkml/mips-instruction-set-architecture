@@ -86,17 +86,18 @@ Remember, assembly language itself is still an abstraction away from the languag
 ##### Higher Level Language Example (JavaScript)
 
 ```js
-const reg9 = reg11 - 3;
+const dataInReg8 = dataInReg17 + dataInReg18;
 ```
 
 ##### MIPS Assembly Language Instruction
 
 ```asm
-addi        $9, $11, -3
+add        R8, R17, R18   # register numbers
+add        $t0, $s1, $s2  # conventional names of those CPU register numbers
 ```
 
 ##### Machine Code Instruction
 
 ```bin
-001000 01011 01001 1111111111111101
+000000 10001 10010 01000 00000 100000
 ```
