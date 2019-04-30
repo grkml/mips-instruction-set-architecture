@@ -18,21 +18,19 @@ Data operation instructions are what we think of when we write programming state
 
 | Operation     | MIPS Instruction           | Higher Order Language Equivalent  |
 | ------------- |-------------| -----|
-| addition      | ```add    $s1,$s2,$s3``` | ```$s1 = $s2 + $s3``` |
-| subtraction   |  ```sub    $s1,$s2,$s3``` | ```$s1 = $s2 – $s3``` |
-| immediate addition   |  ```addi   $s1,$s2,75``` | ```$s1 = $s2 + 75``` |
-| and |  ```and    $s1,$s2,$s3``` | ```$s1 = $s2 & $s3``` |
-| or |    ```or     $s1,$s2,$s3``` | ```$s1 = $s2 \| $s3``` |
-| nor |     ```nor    $s1,$s2,$s3``` | ```$s1 = ~ ($s2 \| $s3)``` |
+| addition      | ```add $s1,$s2,$s3``` | ```$s1 = $s2 + $s3``` |
+| subtraction   |  ```sub $s1,$s2,$s3``` | ```$s1 = $s2 – $s3``` |
+| immediate addition   |  ```addi $s1,$s2,75``` | ```$s1 = $s2 + 75``` |
+| and |  ```and $s1,$s2,$s3``` | ```$s1 = $s2 & $s3``` |
+| or |    ```or $s1,$s2,$s3``` | ```$s1 = $s2 \| $s3``` |
+| nor |     ```nor $s1,$s2,$s3``` | ```$s1 = ~ ($s2 \| $s3)``` |
 
 ### Data Transfer
 Of course the CPU's register memory system is small (with only 32 registers). So, data needs to be constantly stored to and loaded from RAM. Data transfer instructions occur in the background in between data operation instructions. Here are a few examples:
 
 | Operation     | MIPS Instruction           | Higher Order Language Equivalent  |
 | ------------- |-------------| -----|
-| addition      | ```add R1, R2, R3``` | ```R1 = R2 + R3``` |
-| subtraction   |  ```sub R1, R2, R3``` | ```R1 = R2 - R3``` |
-| and |  ```and $s1,$s2,$s3``` | ```$s1 = $s2 & $s3``` |
-| or |    ```or $s1,$s2,$s3``` | ```$s1 = $s2 \| $s3``` |
-| nor |     ```nor $s1,$s2,$s3``` | ```$s1 = ~ ($s2 \| $s3)``` |
+| load word      | ```lw $s1,20($s2)``` | ```$s1 = Memory[$s2 + 20]``` |
+| store word   |  ```sw $s1,20($s2)``` | ```Memory[$s2 + 20] = $s1``` |
+
 ### Sequencing
