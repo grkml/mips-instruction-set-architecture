@@ -101,3 +101,9 @@ add        $t0, $s1, $s2  # conventional names of those CPU register numbers
 ```bin
 000000 10001 10010 01000 00000 100000
 ```
+
+### Breaking Down the Machine Code
+
+| opcode (```operation```) | rs (```source1```) | rt (```source2```) | rd (```destination```) | shamt (```shiftAmount```) | funct (```functionSelector```)| 
+| :------------- | :-------------| :-----| :---| :---| :--|
+| 000000 | 10001 | 10010 | 01000 | 00000 | 100000 |
