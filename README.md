@@ -66,3 +66,6 @@ SkipElse:
   ### rest of code
 
 ```
+
+## Machine Code Representation
+Remember, assembly language itself is still an abstraction away from the language the CPU actually understands, binary machine code.
