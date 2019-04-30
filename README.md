@@ -121,8 +121,21 @@ add        R8, R17, R18   # register numbers
 * This field, often called the function code, selects the specific variant of the operation in the ```opcode``` field.
 
 ## MIPS Instruction Formats
-### We have a slight problem with the instruction above...
-> MIPS provides 32 bits per instruction, and this works great when ```rs``` and ```rt``` refer to data stored in a CPU register number. However, machines also need to be able to handle immediately passed values in addition to variables. To solve this problem, MIPS actually has 3 instruction formats:
+### One Annoying Problem
+MIPS provides 32 bits per instruction, and this works great when ```rs``` and ```rt``` refer to data by CPU register number. However, machines also need to be able to handle immediately passed values in addition to variables. To solve this problem, MIPS actually has 3 instruction formats:
+
+| Format | 6 bits | 5 bits | 5 bits | 5 bits | 5 bits | 6 bits | Use |
+| :----- | :------| :------| :------| :------| :------|--------|-----|
+| R | ```opcode``` | ```rs``` | ```rt``` | ```rd``` | ```shamt``` | ```funct``` | Arithmetic, Logic |
+| I<td colspan=1>```opcode```<td colspan=1>```rs```<td colspan=1>```rt```<td colspan=3>address/immediate (16 bits)<td colspan=1>Load/Store, Branch, Immediate |
+
+
+
+
+
+
+
+
 
 ### R Instruction
 ### I Instruction
