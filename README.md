@@ -74,4 +74,10 @@ SkipElse:
 ```
 
 ## Machine Code Representation
-Remember, assembly language itself is still an abstraction away from the language the CPU actually understands, binary machine code.
+Remember, assembly language itself is still an abstraction away from the language the CPU actually understands...binary machine code!
+
+<p align="center">
+  <img width="100%" src="https://github.com/gurkamalpsc/mips-instruction-set-architecture/blob/master/img/machineCode.jpg">
+</p>
+
+
