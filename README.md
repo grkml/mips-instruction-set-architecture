@@ -108,21 +108,21 @@ add        R8, R17, R18   # register numbers
 | 000000 | 10001 | 10010 | 01000 | 00000 | 100000 |
 
 ### ```opcode``` - Operation Code
-> This 6 bit code represents the basic operation of the instruction. ie ```add```
+* This 6 bit code represents the basic operation of the instruction. ie ```add```
 ### ```rs``` - Source 1
-> This 5 bit code represents the first register source operand
+* This 5 bit code represents the first register source operand
 ### ```rt``` - Source 2
-> This 5 bit code represents the second register source operand.
+* This 5 bit code represents the second register source operand.
 ### ```rd``` - Desination
-> This 5 bit code represents the register destination operand. It gets the result of the operation.
+* This 5 bit code represents the register destination operand. It gets the result of the operation.
 ### ```shamt``` - Shift Amount
-> This 5 bit code represents the “shift amount” and is only used for shift instructions.
+* This 5 bit code represents the “shift amount” and is only used for shift instructions.
 ### ```funct``` - Function
-> This field, often called the function code, selects the specific variant of the operation in the ```opcode``` field.
+* This field, often called the function code, selects the specific variant of the operation in the ```opcode``` field.
 
 ## MIPS Instruction Formats
 ### We have a slight problem with the instruction above...
-MIPS provides 32 bits per instruction, and this works great when ```rs``` and ```rt``` refer to data stored in a CPU register number. However, machines also need to be able to handle immediately passed values in addition to variables. To solve this problem, MIPS actually has 3 instruction formats:
+> MIPS provides 32 bits per instruction, and this works great when ```rs``` and ```rt``` refer to data stored in a CPU register number. However, machines also need to be able to handle immediately passed values in addition to variables. To solve this problem, MIPS actually has 3 instruction formats:
 
 ### R Instruction
 ### I Instruction
