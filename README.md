@@ -93,7 +93,6 @@ const dataInReg8 = dataInReg17 + dataInReg18;
 
 ```asm
 add        R8, R17, R18   # register numbers
-add        $t0, $s1, $s2  # conventional names of those CPU register numbers
 ```
 
 ##### Machine Code Instruction
@@ -107,3 +106,10 @@ add        $t0, $s1, $s2  # conventional names of those CPU register numbers
 | ```opcode``` | ```rs``` | ```rt``` | ```rd``` | ```shamt``` | ```funct``` | 
 | :------------- | :-------------| :-----| :---| :---| :--|
 | 000000 | 10001 | 10010 | 01000 | 00000 | 100000 |
+
+##### ```opcode```
+##### ```rs```
+##### ```rt```
+##### ```rd```
+##### ```shamt```
+##### ```funct```
