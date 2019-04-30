@@ -34,13 +34,35 @@ Of course the CPU's register memory system is small (with only 32 registers). So
 | store word   |  ```sw $s1,20($s2)``` | ```Memory[$s2 + 20] = $s1``` |
 
 ### Sequencing
-Sequencing instructures make decisions and change the control flow of the program. They control the flow by telling the execution sequence to jump to some ```Label```, a portion of the MIPS Assembly Language marked with that ```Label```
+Sequencing instructions make decisions and change the control flow of the program. They control the flow by telling the execution sequence to jump to some ```Label```, a portion of the MIPS Assembly Language marked with that ```Label```.
 
 | Operation     | MIPS Instruction      | Higher Order Language Equivalent  |
 | :------------- | :-------------| :-----|
 | if branch on equal, jump to branch at ```Label```...      | ```beq $s1,$s2,Label``` | ```if ($s1 == $s2) { Label(); }``` |
 | if branch on not equal, jump to branch at ```Label```...   |  ```bne $s1,$s2,Label``` | ```if ($s1 != $s2) { Label(); }``` |
-| immediate addition   |  ```addi $s1,$s2,75``` | ```$s1 = $s2 + 75``` |
-| and |  ```and $s1,$s2,$s3``` | ```$s1 = $s2 & $s3``` |
-| or |    ```or $s1,$s2,$s3``` | ```$s1 = $s2 \| $s3``` |
-| nor |     ```nor $s1,$s2,$s3``` | ```$s1 = ~ ($s2 \| $s3)``` |
+| jump to ```Label```   |  ```j Label``` | ```Label();``` |
+
+##### Higher Level Language Example
+
+```cpp
+if (i == j)
+  h = i + j;
+else
+  h = i - j;
+```
+
+##### MIPS Assembly Language Example
+
+```asm
+# Registers to keep note of: $s1 stores i, $s2 stores j, $s3 stores h
+
+Main:
+  bne $s1, $s2, DoElse
+  add $s3, $s1, $s2
+  j SkipElse
+Do Else:
+  sub $s3, $s1, $s2
+SkipElse:
+  ### rest of code
+
+```
