@@ -107,17 +107,17 @@ add        R8, R17, R18   # register numbers
 | :------------- | :-------------| :-----| :---| :---| :--|
 | 000000 | 10001 | 10010 | 01000 | 00000 | 100000 |
 
-### ```opcode``` - Operation Code
+#### ```opcode``` - Operation Code
 * This 6 bit code represents the basic operation of the instruction. ie ```add```
-### ```rs``` - Source 1
+#### ```rs``` - Source 1
 * This 5 bit code represents the first register source operand
-### ```rt``` - Source 2
+#### ```rt``` - Source 2
 * This 5 bit code represents the second register source operand.
-### ```rd``` - Desination
+#### ```rd``` - Desination
 * This 5 bit code represents the register destination operand. It gets the result of the operation.
-### ```shamt``` - Shift Amount
+#### ```shamt``` - Shift Amount
 * This 5 bit code represents the “shift amount” and is only used for shift instructions.
-### ```funct``` - Function
+#### ```funct``` - Function
 * This field, often called the function code, selects the specific variant of the operation in the ```opcode``` field.
 
 ## MIPS Instruction Formats
